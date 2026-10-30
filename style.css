@@ -1,0 +1,315 @@
+/* ==== GENERAL STYLING ==== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark: #17232e;
+    --cream: #f5f1e9;
+    --gold: #c5a46d;
+    --text: #38434c;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+}
+
+/* ==== NAVIGATION====*/
+
+header {
+    background-color: var(--dark);
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* ==== HERO SECTION =====*/
+
+.hero {
+    min-height: 620px;
+    background-color: var(--dark);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.subtitle {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-text {
+    max-width: 600px;
+    color: #d1d7dc;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--gold);
+    color: var(--dark);
+}
+
+.hero-name {
+    margin-top: 65px;
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: #aeb7bd;
+}
+
+/* ==== GENERAL SECTIONS ==== */
+
+.section {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: var(--dark);
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.section > p:not(.subtitle) {
+    max-width: 720px;
+    margin: 15px auto;
+}
+
+/* =====ABOUT SECTION===== */
+
+.about {
+    background-color: var(--white);
+}
+
+/* ==== QUALITIES SECTION =====*/
+
+.qualities {
+    background-color: var(--cream);
+}
+
+.qualities-container {
+    max-width: 1050px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.quality-card {
+    background-color: var(--white);
+    padding: 35px;
+    text-align: left;
+    border-left: 3px solid var(--gold);
+    transition: transform 0.3s;
+}
+
+.quality-card:hover {
+    transform: translateY(-6px);
+}
+
+.quality-card h3 {
+    color: var(--dark);
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+/* ===== INSPIRATION SECTION ==== */
+
+.inspiration {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.inspiration h2 {
+    color: var(--white);
+}
+
+.inspiration blockquote {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 25px;
+    border-left: 3px solid var(--gold);
+    color: var(--gold);
+    font-size: 23px;
+    font-style: italic;
+}
+
+/* ==== LESSONS SECTION ==== */
+
+.lessons {
+    background-color: var(--white);
+}
+
+.lessons-list {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+.lessons-list li {
+    padding: 7px;
+}
+
+/* ==== ABLE SECTION ==== */
+
+.table-section {
+    background-color: var(--cream);
+}
+
+table {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+th, td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--dark);
+    color: var(--gold);
+}
+
+/* ==== PERSONAL MESSAGE ==== */
+
+.message {
+    background-color: var(--white);
+}
+
+.message h3 {
+    color: var(--dark);
+    margin-top: 35px;
+}
+
+.signature {
+    color: var(--gold);
+    font-style: italic;
+    margin-top: 20px !important;
+}
+
+/* ==== FOOTER ==== */
+
+footer {
+    background-color: var(--dark);
+    color: #c5cbd0;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+/* ==== RESPONSIVE DESIGN ====*/
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .qualities-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+    .inspiration blockquote {
+        font-size: 19px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
